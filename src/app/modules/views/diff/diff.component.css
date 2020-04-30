@@ -1,0 +1,9 @@
+#text-area-containers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#autosize{
+
+}

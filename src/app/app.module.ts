@@ -5,20 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule, MatMenuModule, MatToolbarModule} from '@angular/material';
-import { DiffComponent } from './modules/diff/diff.component';
-import { PrettifyComponent } from './modules/prettify/prettify.component';
-import { SimplifyComponent } from './modules/simplify/simplify.component';
-import { SplashComponent } from './modules/splash/splash.component';
-import { EncodingComponent } from './modules/encoding/encoding.component';
+import { DiffComponent } from './modules/views/diff/diff.component';
+import { PrettifyComponent } from './modules/views/prettify/prettify.component';
+import { SimplifyComponent } from './modules/views/simplify/simplify.component';
+import { SplashComponent } from './modules/views/splash/splash.component';
+import { EncodingComponent } from './modules/views/encoding/encoding.component';
+import {ViewsModule} from './modules/views/views.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    DiffComponent,
-    PrettifyComponent,
-    SimplifyComponent,
-    SplashComponent,
-    EncodingComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +22,8 @@ import { EncodingComponent } from './modules/encoding/encoding.component';
     BrowserAnimationsModule,
     MatMenuModule,
     MatButtonModule,
-    MatToolbarModule
+    MatToolbarModule,
+    ViewsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
