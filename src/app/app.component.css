@@ -3,3 +3,22 @@
   justify-content: center;
   width: 100%;
 }
+
+.stripe {
+  height: 100%;
+  background-image:
+    repeating-linear-gradient(
+      -45deg,
+      /*#f7f7f7 3rem,*/
+      /*#fffef3 6rem*/ #ffffff 2rem,
+      #f3f3f3 6rem
+    );
+  background-size: 200% 200%;
+  animation: stripe 180s linear infinite;
+}
+
+@keyframes stripe {
+  100% {
+    background-position: 100% 100%;
+  }
+}

@@ -1,23 +1,45 @@
-<div id="text-area-containers">
-  <mat-form-field [style.fontSize]="fontSize.value">
-    <mat-label>Autosize textarea</mat-label>
-    <textarea matInput
-              cdkTextareaAutosize
-              #autosize="cdkTextareaAutosize"
-              cdkAutosizeMinRows="1"
-              cdkAutosizeMaxRows="5"></textarea>
-  </mat-form-field>
-  <mat-form-field [style.fontSize]="fontSize.value">
-    <mat-label>textarea</mat-label>
-    <textarea matInput
-              cdkTextareaAutosize
-              #autosize="cdkTextareaAutosize"
-              cdkAutosizeMinRows="1"
-              cdkAutosizeMaxRows="5"></textarea>
-  </mat-form-field>
+<div style="display: flex; justify-content: center">
+  <div id="compare-input-container">
+
+    <form [formGroup]="formGroup" id="text-area-containers">
+      <div class="text-area-container">
+        <mat-label><h4 mat-display-4> Compare This</h4></mat-label>
+        <textarea class="text-area"
+                  matInput
+                  cdkTextareaAutosize
+                  #autosize="cdkTextareaAutosize"
+                  cdkAutosizeMinRows="15"
+                  cdkAutosizeMaxRows="20"
+                  cols="50" formControlName="before">
+    </textarea>
+      </div>
+
+      <div class="text-area-container">
+        <mat-label><h4 mat-display-4> To That</h4></mat-label>
+        <textarea matInput
+                  cdkTextareaAutosize
+                  #autosize="cdkTextareaAutosize"
+                  cdkAutosizeMinRows="15"
+                  cdkAutosizeMaxRows="20"
+                  cols="50" formControlName="after">
+    </textarea>
+      </div>
+    </form>
+    <mat-divider style="margin: 15px;"></mat-divider>
+    <div class="button-container">
+      <button mat-raised-button type="submit" color="accent" (click)="submitComparison()" class="btn btn-primary">
+        Compare
+      </button>
+
+    </div>
+    <td-ngx-text-diff
+      [left]="this.content.leftContent"
+      [right]="this.content.rightContent"
+      (compareResults)="onCompareResults($event)"
+      [diffContent]="contentObservable$">
+    </td-ngx-text-diff>
+  </div>
 </div>
-<td-ngx-text-diff
-  [left]="left"
-  [right]="right"
-  (compareResults)="onCompareResults($event)"
-></td-ngx-text-diff>
+
+
+

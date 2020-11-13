@@ -7,3 +7,36 @@
 #autosize{
 
 }
+
+.text-area-container{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+
+}
+
+.text-area{
+}
+
+#diff-container{
+  padding: 20px;
+  /*max-width: 60%;*/
+  display: flex;
+  justify-content: center;
+}
+
+#compare-input-container{
+  display: flex;
+  justify-content: center;
+  min-width: 60%;
+  max-width: 85%;
+  padding: 20px;
+  flex-direction: column;
+}
+
+.button-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}

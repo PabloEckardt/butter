@@ -7,10 +7,9 @@ import {SplashComponent} from './splash/splash.component';
 import {EncodingComponent} from './encoding/encoding.component';
 import {NgxTextDiffComponent, NgxTextDiffModule} from 'ngx-text-diff';
 import {ScrollDispatchModule} from '@angular/cdk/scrolling';
-import {MatFormFieldModule} from '@angular/material';
+import {MatButtonModule, MatDividerModule, MatFormFieldModule} from '@angular/material';
 import {ReactiveFormsModule} from '@angular/forms';
 import {TextFieldModule} from '@angular/cdk/text-field';
-
 
 @NgModule({
   declarations: [
@@ -22,11 +21,13 @@ import {TextFieldModule} from '@angular/cdk/text-field';
   ],
   imports: [
     CommonModule,
-    NgxTextDiffModule,
     ScrollDispatchModule,
     MatFormFieldModule,
     ReactiveFormsModule,
-    TextFieldModule
+    TextFieldModule,
+    NgxTextDiffModule,
+    MatButtonModule,
+    MatDividerModule
   ]
 })
 export class ViewsModule {
